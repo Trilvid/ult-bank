@@ -1,0 +1,512 @@
+@media (max-width: 320px) {
+   
+.sideNav nav .smallSide {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    background-color: var(--primary);
+  }
+  
+    .smallSide .down {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    .smallSide .down span {
+        width: 100px;
+        margin-right: 40px;
+        padding: 0;
+        margin-left: auto;
+    }
+
+    .bigSide section {
+        padding: 10px;
+    }
+
+    .bigSide section h1 {
+        font-size: 1.1rem;
+    }
+
+    .bigSide section .new {
+        width: fit-content;
+        font-size: .7rem;
+    }
+
+    .refer {
+        line-height: normal;
+    }
+
+    .refer p {
+        font-size: .8rem;
+        font-family: poppins;
+        padding-left: 0;
+        padding: 7px;
+    }
+
+    /* style for profile */
+    .tab-contents .part {
+        flex-wrap: wrap;
+    }
+
+    .tab-contents .part .picx {
+        margin-left: 60px;
+        width: 95%;
+    }
+
+    .tab-button {
+        width: fit-content;
+        padding: 5px;
+    }
+
+    .tab-list-item {
+        font-size: .9rem;
+    }
+
+   .tab-contents .part .picx {
+        margin-left: 35px;
+    }
+
+}
+
+
+@media (max-width: 640px)  {
+
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow: none;
+    }
+
+/* style for header */
+    .header {
+        width: 100%;
+        padding: 0%;
+        height: 70px;
+    }
+
+    .header .logo {
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo img{
+        width: 30px;
+        margin-left: 10px;
+    }
+
+    .header .menu {
+        padding: 0px 10px;
+        box-sizing: border-box;
+    }
+
+    .header .menu .toogleBtn {
+        display: none;
+    }
+
+    .header .menu .tBar {
+        display: block;
+        align-self: center;
+        justify-self: center;
+        font-size: var(--font-size);
+        padding-left: 10px;
+        margin: 0%;
+        font-size: 1.5em;
+    }
+
+    /* media style for sidenav */
+    .sideNav {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: none;
+        padding: 10px;
+    }
+
+    .sideNav nav {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .sideNav nav .smallSide {
+        width: 100%;
+        z-index: 4;
+        display: none;
+        position: absolute;
+        top: 10;
+    }
+
+    .sideNav nav .smallSide .top {
+        width: 100%;
+        border-radius: 0px;
+        padding: 0;
+    }
+
+    .sideNav nav .top p {  
+        font-size: 1rem;
+        /* font-weight: bold; */
+    }
+
+    .smallSide .down {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    .down span {
+        width: 120px;
+        margin-right: 40px;
+        padding: 0;
+        margin-left: auto;
+    }
+
+    .sideNav nav .bigSide {
+        width: 99%;
+        box-sizing: border-box;
+    }
+
+    .bigSide section {
+        padding: 10px;
+    }
+
+    .bigSide .contain {
+        width: 95%;
+        border-radius: 7px;
+    }
+
+    .sideNav nav .bigSide .dash {
+        padding: 2%;
+        box-sizing: border-box;
+    }
+
+    .sideNav nav .bigSide .dash span {
+        width: 99%;
+        margin-left: 0px;
+    }
+
+
+    .refer {
+        width: 96%;
+        margin: auto;
+        margin-top: 5%;
+        box-sizing: border-box;
+    }
+
+    .refer span {
+        width: 100%;
+    }
+    
+
+    .space h1 {
+        font-size: 1.5em;
+    }
+
+    /* media style for deposit */
+    .deposit {
+        flex-wrap: wrap;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .deposit .first {
+        width: 98%;
+    }
+
+    .cards {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .card {
+        /* margin-left: 35px; */
+        margin: auto;
+        margin-top: 10px;
+        border: 1px solid gray;
+        box-shadow: 0px 0px 0px;
+    }
+
+    .deposit .second {
+        width: 70%;
+    }
+
+    .deposit button {
+        border: 1px solid red ;
+    }
+
+    /* media style for withdrawal page  */
+    .withdraw {
+        border: 1px solid rebeccapurple;
+    }
+
+    .withdraw .topx {
+        flex-wrap: wrap;
+    }
+
+    .topx span {
+        width: 100%;
+    }
+
+    /* media querys for  */
+    .transfer {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .transfer form span {
+        width: 95%;
+
+    }
+
+    .transfer span button {
+        margin-left: 3%;
+    }
+
+    /* media Query for Loan */
+    .profile {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .profile form span {
+        width: 95%;
+    }
+
+    /* style for profile */
+    .part {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .part .picx {
+        margin: auto;
+        width: 100%;
+    }
+
+    /* style for modal  */
+    .modal {
+        border: 1px solid;
+    }
+
+    .modal .modalBody {
+        width: 80%;
+    }
+
+    .modal .modalContainer span input{
+        width: 88%;
+    }
+
+    /* style for settings  */
+    div.tabs {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    div .tab-list {
+        width: 100%;
+    }
+
+    .tab-button {
+        width: fit-content;
+    }
+
+    .tab-list-item {
+        font-size: .8rem;
+    }
+
+    .tab-list-item-active {
+        font-size: .8rem;
+    }
+
+    .footer {
+        display: block;
+        width: 100vw;
+    }
+
+    /* style for login */
+    .login {
+        width: 100%;
+    }
+
+    .login .holder {
+        flex-direction: column;
+    }
+
+    .holder .span {
+        width: 90%;
+        display: none;
+    }
+
+    .holder .form, .logform {
+        width: 99%;
+    }
+
+    /* styles for admin dahboard */
+    .allDiv {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .allDiv .adminTop {
+        width: 98%;
+    }
+
+    .allDiv .adminDown {
+        width: 98%;
+    }
+
+
+
+}
+
+@media (max-width: 768px) {
+    
+    .header .menu .toogleBtn {
+        display: none;
+    }
+
+    .header .menu .tBar {
+        display: block;
+        align-self: center;
+        justify-self: center;
+        font-size: var(--font-size);
+        padding-left: 10px;
+        margin: 0%;
+        font-size: 1.5em;
+    }
+
+    /* media style for sidenav */
+    .sideNav {
+        width: 100%;
+        box-sizing: border-box;
+        overflow: none;
+        padding: 10px;
+    }
+
+    .sideNav nav {
+        flex-wrap: wrap;
+        padding: 0;
+    }
+
+    .sideNav nav .smallSide {
+        width: 100%;
+        z-index: 4;
+        display: none;
+        position: absolute;
+        top: 10;
+    }
+
+    .sideNav nav .smallSide .top {
+        width: 100%;
+        border-radius: 0px;
+        padding: 0;
+    }
+
+    .sideNav nav .top p {  
+        font-size: 1rem;
+    }
+
+    .smallSide .down {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+    }
+
+    .down span {
+        width: 120px;
+        margin-right: 40px;
+        padding: 0;
+        margin-left: auto;
+    }
+
+    .sideNav nav .bigSide {
+        width: 99%;
+        box-sizing: border-box;
+    }
+
+    .bigSide section {
+        padding: 10px;
+    }
+
+    .bigSide .contain {
+        width: 95%;
+        border-radius: 7px;
+    }
+
+    .sideNav nav .bigSide .dash {
+        padding: 2%;
+        box-sizing: border-box;
+    }
+
+    .sideNav nav .bigSide .dash span {
+        width: 99%;
+        margin-left: 0px;
+    }
+
+
+    .refer {
+        width: 96%;
+        margin: auto;
+        margin-top: 5%;
+        box-sizing: border-box;
+    }
+
+    .refer span {
+        width: 100%;
+    }
+    
+
+    .space h1 {
+        font-size: 1.5em;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .smallSide .down {
+        width: 100%;
+    }
+
+    .down span {
+        width: 100px;
+        height: 100px;
+        padding: 0;
+        line-height: 10px;
+    }
+
+    .tablex {
+        overflow-y: auto;
+    }
+
+  .tablex section .profilePix {
+     border-color: green;
+     max-width: 50px;
+    }
+/* 
+    .tablex::-webkit-scrollbar{
+        width: 1px;
+        border: 1px solid red;
+    }
+
+    .tablex::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 2px;
+    }
+    
+    .tablex::-webkit-scrollbar-thumb {
+        background: #8c8c8c;
+        border-radius: 2px;
+    } */
+    
+    
+}
+
+@media (max-width: 1200px) {
+    
+}
+

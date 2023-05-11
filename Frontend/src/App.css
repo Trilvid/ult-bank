@@ -1,0 +1,640 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Montserrat:wght@300;400&family=Open+Sans:wght@300;400&family=Poppins:wght@300;400;500&family=Roboto:wght@300;400&display=swap');
+
+/* width */
+*::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 2px;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+  background: #8c8c8c;
+  border-radius: 2px;
+}
+
+/* buttons */
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: var(--secondary);
+  border: none;
+  text-align: center;
+  font-size: 15px;
+  padding: 8px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  font-family: var(--fontH2);
+  text-transform: capitalize;
+ }
+ 
+ button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  color: var(--primary);
+  font-weight: bold;
+  font-family: var(--fontBtn);
+ }
+  
+ button a span {
+  color: var(--primary);
+  font-weight: 600;
+ }
+ 
+ button span:after {
+  content: '»';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -15px;
+  transition: 0.5s;
+ }
+ 
+ button:hover span {
+  padding-right: 15px;
+ }
+ 
+ button:hover span:after {
+  opacity: 1;
+  right: 0;
+ }
+
+ /* input box */
+ .inp {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.inp .label {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 500;
+  transform-origin: 0 0;
+  transform: translate3d(0, 0, 0);
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.inp .focus-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.05);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.inp input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  border: 0;
+  font-family: var(--fontH1);
+  padding: 16px 12px 0 12px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 400;
+  background: rgba(0, 0, 0, 0.02);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+  color: #000;
+  transition: all 0.15s ease;
+  pointer-events: none;
+  color: gray;
+}
+
+.inp input:hover {
+  background: rgba(0, 0, 0, 0.04);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.inp input:not(:-moz-placeholder-shown) + .label {
+  color: rgba(0, 0, 0, 0.5);
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:not(:-ms-input-placeholder) + .label {
+  color: rgba(0, 0, 0, 0.5);
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:not(:placeholder-shown) + .label {
+  color: rgba(0, 0, 0, 0.5);
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:focus {
+  background: rgba(0, 0, 0, 0.05);
+  outline: none;
+  box-shadow: inset 0 -2px 0 var(--secondary);
+}
+
+.inp input:focus + .label {
+  color: var(--secondary);
+  transform: translate3d(0, -12px, 0) scale(0.75);
+}
+
+.inp input:focus + .label + .focus-bg {
+  transform: scaleX(1);
+  transition: all 0.1s ease;
+}
+
+/* style for deposit card */
+.card {
+  width: 100%;
+  max-width: 260px;
+  height: 70px;
+  background: var(--primary);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 2px #bfbfbf;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.03);
+}
+
+.img {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  border-radius: 10px;
+  color: var(--textColor);
+}
+
+.card:hover > .img {
+  transition: 0.5s ease-in-out;
+  color: var(--secondary);
+}
+
+.textBox {
+  width: calc(100% - 90px);
+  margin-left: 10px;
+  color: var(--textColor);
+  font-family: var(--fontH1);
+}
+
+.textContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.span {
+  font-size: 10px;
+}
+
+.h1 {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: var(--fontP);
+  text-transform: capitalize;
+  color: var(--textColor);
+}
+
+/* modal */
+.modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  box-sizing: border-box;
+  /* display: none; */
+  z-index: 1000;
+}
+
+.modalBody {
+  width: 30%;
+  margin: auto;
+  background-color: var(--primary);
+  padding: 10px;
+}
+ 
+.modalContent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.modalContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.modalHeader {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: flex-end; */
+  margin-bottom: 2%;
+  width: 97%;
+  box-sizing: border-box;
+  margin-top: 0%;
+  position: absolute;
+  top: 0;
+  cursor: pointer;  
+}
+
+.modalHeader .payMth {
+  width: fit-content;
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  text-transform: capitalize;
+  border-radius: 50px 50px;
+  background-color:#b3e6b3;
+  color: black;
+  font-family: var(--fontP);
+  padding: 0%;
+}
+
+.payMth span {
+  background-color: #00994d;
+  width: fit-content;
+  height: 10px;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-bottom: 2px;
+  border-radius: 50px 50px;
+  padding: 3px 5px;
+  font-size: 10px;
+  font-weight: bold;
+  color: var(--primary);
+  box-shadow: 0px 0px 1px 0px;
+}
+
+.payMth p{
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 0%;
+  padding-top: 5px;
+  font-weight: bold;
+  color: #00994d;
+}
+
+.modalHeader .w3-closebtn {
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-align: right;
+  width: 100%;
+}
+
+.modalContainer img {
+  width: 40%;
+  margin-left: 30%;
+  align-content: center;
+}
+
+.modalContainer span {
+  margin-top: 10%;
+  width: 90%;
+  padding: 2%;
+  color: var(--secondary);
+}
+
+.modalContainer span:nth-child(2) {
+  border: 1px solid var(--secondary);
+  margin-bottom: 20px;
+}
+
+.modalContainer span input {
+  width: 92%;
+  padding: 5px;
+  outline: none;
+  border: 0px;
+}
+
+.modalContainer .myforme {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  padding: 0%;
+  margin-top: 30px;
+}
+
+.myforme span, .myforme span:nth-child(2) {
+  margin-top: 0em;
+  margin-bottom: 0.2em;
+  border: 0px;
+  padding: 5px;
+}
+
+.myforme label {
+  color: var(--secondary);
+}
+
+.myforme span input {
+  border: 1px solid var(--secondary);
+  padding: 15px;
+}
+
+.myforme span p{
+  color: #8c8c8c;
+}
+
+.myforme span button {
+  color: var(--primary);
+  font-family: var(--fontBtn);
+}
+
+.bodyModal {
+  width: 60%;
+}
+
+.modalContainer span section {
+  border: 1px solid;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.modalContainer span section label {
+  width: 50%;
+  border: 1px solid;
+  margin-top: 0;
+  color: red;
+  padding: 5;
+}
+
+/* tooltip */
+.tooltip {
+  width: 100%;
+  max-width: 300px;
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+  box-shadow: 0px 0px 1px #bfbfbf;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--primary);
+  box-sizing: border-box;
+  transition: opacity 0.5s;
+  margin-top: 2px;
+  /* opacity: 0; */
+}
+
+.tooltip .toolHeader p{
+  font-family: var(--fontH1);
+  font-size: 1.2em;
+  color: #737373;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.tooltip .toolHeader .icx {
+  font-size: 1.2em;
+  padding-top: 3px;
+  padding-left: 5px;
+  padding-right: 8px;
+}
+
+.tooltip .toolProfile {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color:  #e6e6e6;
+  box-sizing: border-box;
+}
+
+.tooltip .toolProfile .img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  border: 1px solid;
+  box-sizing: border-box;
+}
+
+.tooltip .toolProfile .tooltext {
+  width: 80%;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  line-height: 1;
+  padding-left: 2%;
+}
+
+.tooltip .tooltext h2 {
+  font-family: var(--fontH1);
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--secondary);
+}
+
+.tooltip .tooltext p{
+  word-wrap: 4;
+  word-spacing: 2em;
+  font-size: 1em;
+  font-family: var(--fontH2);
+  line-height: normal;
+  color: var(--textColor);
+  margin-top: -5%;
+}
+
+.tooltip .toolSettings {
+  padding-left: 5%;
+}
+
+.tooltip .toolSettings .tp {
+  line-height: 5px;
+  padding: 2px;
+}
+
+.tooltip .toolSettings .tp h5 {
+  color: var(--textColor);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.tooltip .toolSettings h1 {
+  font-family: var(--fontP);
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.tooltip .toolSettings p {
+  color: var(--textColor);
+  text-transform: capitalize;
+  font-family: var(--fontH1);
+}
+
+
+
+/* style for input for login and register*/
+.input-group {
+  position: relative;
+ }
+ 
+ .input {
+  border: solid 1.5px #9e9e9e;
+  border-radius: 1rem;
+  background: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #f5f5f5;
+  transition: border 150ms cubic-bezier(0.4,0,0.2,1);
+ }
+ 
+ .user-label {
+  position: absolute;
+  left: 15px;
+  color: #e8e8e8;
+  pointer-events: none;
+  transform: translateY(1rem);
+  transition: 150ms cubic-bezier(0.4,0,0.2,1);
+ }
+ 
+ .input:focus, input:valid {
+  outline: none;
+  border: 1.5px solid  var(--secondary);
+ }
+ 
+ .input:focus ~ label, input:valid ~ label {
+  transform: translateY(-50%) scale(0.8);
+  background-color: #212121;
+  /* background-color: rgba(0, 0, 0, 1); */
+  padding: 0 .2em;
+  color: var(--secondary);
+ }
+
+
+
+
+ /* button {
+  font-weight: bold;
+  color: white;
+  border-radius: 2rem;
+  width: 95.02px;
+  height: 42.66px;
+  border: none;
+  background-color: #3653F8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button .span-mother {
+  display: flex;
+  overflow: hidden;
+}
+
+button:hover .span-mother {
+  position: absolute;
+}
+
+button:hover .span-mother span {
+  transform: translateY(1.2em);
+}
+
+button .span-mother span:nth-child(1) {
+  transition: .2s;
+}
+
+button .span-mother span:nth-child(2) {
+  transition: .3s;
+}
+
+button .span-mother span:nth-child(3) {
+  transition: .4s;
+}
+
+button .span-mother span:nth-child(4) {
+  transition: .5s;
+}
+
+button .span-mother span:nth-child(5) {
+  transition: .6s;
+}
+
+button .span-mother span:nth-child(6) {
+  transition: .7s;
+}
+
+button .span-mother2 {
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+}
+
+button .span-mother2 span {
+  transform: translateY(-1.2em);
+}
+
+button:hover .span-mother2 span {
+  transform: translateY(0);
+}
+
+button .span-mother2 span {
+  transition: .2s;
+}
+
+button .span-mother2 span:nth-child(2) {
+  transition: .3s;
+}
+
+button .span-mother2 span:nth-child(3) {
+  transition: .4s;
+}
+
+button .span-mother2 span:nth-child(4) {
+  transition: .5s;
+}
+
+button .span-mother2 span:nth-child(5) {
+  transition: .6s;
+}
+
+button .span-mother2 span:nth-child(6) {
+  transition: .7s;
+} */
+

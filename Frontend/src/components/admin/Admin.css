@@ -1,0 +1,145 @@
+/* style for admin Dashboard */
+
+.allDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.adminTop{
+    width: 48%;
+    height: 400px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 3px #cccccc;
+}
+
+.adminTop span {
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    background-color: #f2f2f2;
+    border-radius: 0;
+}
+
+.adminTop span p {
+    text-transform: capitalize;
+    color: var(--textColor);
+}
+
+.adminTop section {
+    width: 98%;
+    height: 320px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.adminTop section img {
+    width: 100%;
+    height: max-content;
+}
+
+.adminDown {
+    width: 48%;
+}
+
+.adminDown span {
+    width: 90%;
+    max-width: 400px;
+    border-left: 4px solid var(--secondary);
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s ease-in-out;
+}
+
+.adminDown span:hover {
+    background-color: rgba(242, 242, 242, 0.5);
+    border-left: 7px solid var(--secondary);
+    padding: 15px;
+}
+
+.adminDown span h1 {
+    margin-bottom: 0px;
+    padding: 5px;
+}
+
+.adminDown span p {
+    text-align: left;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 2px;
+    padding-left: 1.8em;
+    font-size: .8em;
+    color: var(--textColor);
+    font-weight: 500;
+    font-family: var(--fontH1);
+}
+
+/* styles for admin tables */
+.tablex {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+.tablex section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 4px;
+    background-color: rgba(242, 242, 242, 0.4);
+}
+
+.tablex section .profilePix {
+    width: 100%;
+    height: 40px;
+    max-width: 40px;
+    border-radius: 100%;
+    margin-top: 0;
+    border: 1px solid #cccccc;
+}
+
+.tablex section .email {
+    width: 400px;
+    text-align: center;
+}
+
+.tablex section span {
+    width: fit-content;
+    margin-top: 5px;
+    padding: 5px;
+}
+
+.tablex section span button {
+    background-color: #000000;
+    padding: 8px;
+    margin: 0;
+    color: white;
+    width: 100px;
+
+}
+
+.tablex section p {
+    margin-top: 0;
+    color: var(--textColor);
+}
+
+.tablex section .online {
+    width: 5px;
+    height: 5px;
+    background-color: limegreen;
+    border-radius: 100%;
+}
