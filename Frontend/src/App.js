@@ -9,7 +9,6 @@ import Login from './pages/SignIn';
 import Register from './pages/SignUp'
 import Modal from './components/Settings';
 import Modalx from './components/admin/Trans';
-// import Rug from './components/Rug';
 import Admin from './components/Admin';
 
 
@@ -17,12 +16,12 @@ function App() {
   return (
     <>
   <Routes>
-    <Route path='/' element={<Header />}></Route>
+    <Route path='/' element={<Login />}></Route>
+    <Route path='/dashboard' element={<Header />}></Route>
     <Route path='/signUp' element={<Register />}></Route>
-    <Route path='/login' element={<Login />}></Route>
+    <Route exact path='/login' element={<Login />}></Route>
     <Route path='/settings' element={<Modal />}></Route>
     <Route path='/modalx' element={<Modalx />}></Route>
-    {/* <Route path='/footer' element={<Rug />}></Route> */}
     <Route path='/admin' element={<Admin/>}></Route>
  </Routes>
     </>
